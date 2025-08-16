@@ -1,13 +1,19 @@
 import { useEffect, useState } from "react"
 const url = "https://api.spoonacular.com/recipes/complexSearch";
-const apiKet = "79b0d8fd2d7247c09aa6c52d4c8b1abd";
-export default function Form(){
+const apiKey = "79b0d8fd2d7247c09aa6c52d4c8b1abd";
+export default function Form({foods,setfoods}){
     const[name , setName] = useState("beans");
     useEffect(()=>{
-        console.log("hi")
+       async function fitchfood(){
+         const data= await  fetch(`${url}?query=${name}&apiKey=${apiKey}`); 
+         const respons = await data.json();
+         console.log(respons.results); 
+         setfoods(respons.results)
+        }
+        fitchfood()
     },[name]) 
     return(
-        <div className="h-screen w-full flex justify-center items-center">
+        <div className="h-[50%] w-full flex justify-center items-center">
             <label htmlFor="name" className="w-full flex-col flex items-center justify-center">
                 <span>Recipi Name:</span>
             <input type="text"
