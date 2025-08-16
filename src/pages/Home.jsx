@@ -10,9 +10,9 @@ export default function Home(){
         {/* input */}
         <Form foods={foods} setfoods={setfoods}/>
         {/* contener card */}
-        <div>
+        <div className="flex justify-between flex-wrap p-6 gap-3">
             {foods.map(food=>(
-                <Foods title= {food.title} img = {food.image}/>
+                <Foods title= {food.title} img= {food.image}/>
             ))}
         </div>
         {/* footer */}
