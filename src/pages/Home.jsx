@@ -8,7 +8,7 @@ export default function Home(){
       <div>
         {/* Navbar */}
         {/* input */}
-        <Form foods={foods} setfoods={setfoods}/>
+        <Form food={foods} setfoods={setfoods}/>
         {/* contener card */}
         <div className="flex justify-between flex-wrap p-6 gap-3">
             {foods.map(food=>(
