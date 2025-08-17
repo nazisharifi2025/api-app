@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Form from "../components/form";
 import Foods from "../components/foods";
+import Detail from "../components/Detail";
 
 export default function Home(){
     const[foods,setfoods]= useState([]);
@@ -10,7 +11,9 @@ export default function Home(){
         {/* input */}
         <Form food={foods} setfoods={setfoods}/>
         {/* contener card */}
-        <div className="flex justify-between flex-wrap p-6 gap-3">
+        <div className="w-full h-fit text-center font-bold text-2xl p-5"> <Detail/></div>
+        {/* Detals */}
+        <div className="flex flex-wrap p-2 gap-4">
             {foods.map(food=>(
                 <Foods title= {food.title} img= {food.image}/>
             ))}
