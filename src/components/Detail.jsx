@@ -14,7 +14,7 @@ export default function Detail({foodid}){
       fetchdata();
     },[foodid])
     return( 
-        <div className="shadow-md shadow-gray-400 w-[90%] flex flex-col items-center p-3 mx-auto font-light">
+        <div className="shadow-md shadow-gray-400 w-[90%] flex flex-col h-fit bg-gray-50 items-center p-3 mx-auto font-light">
              <div className="flex justify-between w-full">
             <img src={details.image} className="h-fit w-fit rounded-md shadow-md shadow-grey-400 " alt="" />
             <div className="w-[80%] text-center p-2">
